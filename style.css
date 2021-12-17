@@ -1,0 +1,779 @@
+@import url("https://use.typekit.net/leh5egu.css");
+
+:root {
+    /* Farver */ 
+--lyspink: #fce0e0; 
+--mørkerød: #ee6262; 
+
+    /* Fonts */
+--active: "active", serif; 
+--Desire: "desire-pro", serif;
+}
+
+* { /* definerer margin og padding for alle elementer */
+    margin: 0;  
+    padding: 0;
+}
+
+body {
+    background-color: var(--mørkerød);
+    width: 100%; 
+}
+body, html {
+    scroll-behavior: smooth; 
+}
+
+header {
+    background-color: #fce0e0;
+    width: 100%;
+    height: 55px;
+    align-items: center;   
+    display: flex;
+    position: sticky; 
+    z-index: 999999;   
+}
+
+/* Menu til computer vises ikke under 1000px */
+.computermenu {
+    display: none; 
+}
+
+/* Burgermenu styling */
+#menupunkter {
+    position: absolute;
+    display: none; 
+    right: 0;
+    width: 100vw;
+    top: 55px;
+    font-family: var(--Desire);
+    font-size: 40px; 
+    color: var(--mørkerød);
+    background-color: #fce0e0;
+    padding: 20px 0;       
+}
+
+/* Styling af menupunkter som fremgår i burger-menuen */
+#menupunkter ul {
+    margin-left: 5px; 
+}
+
+.burgermenu:hover #menupunkter {
+    display: block; 
+}
+
+.burgermenu:hover {
+    width: 100%; 
+}
+
+#menupunkter a:hover {
+    color: red;
+    background-color: white;
+    border-radius: 50px;  
+    padding: 10px;
+
+}
+#menupunkter a {
+    text-decoration: none;
+    color: red; 
+}
+/* styling af burger-menu billede */
+.burgermenu img {
+    width: 50px; 
+    height: auto; 
+    position: absolute;
+    right: 5px;    
+}
+.burgermenu 
+
+{
+    position: relative;
+    margin-left: auto;
+    width: 60px;
+    height: 100%;     
+}
+
+/* logo som fremgår når burger-menuen gør */
+.mobillogo 
+{
+    display: block;
+}
+
+.mobillogo img {
+    width: 50px; 
+    height: auto;
+    margin-left: 5px;
+    margin-top: 5px;     
+}
+
+/* Big Photo */
+#forsidebillede img
+{
+    width: 320px;
+    height: auto;
+    display: block;
+    margin: 0px auto 0px auto; 
+}
+
+/* Billede som drejer omkring h2-sektionerne */
+#kampagne h2 img, #konkurrence h2 img, #historie h2 img, #produkter h2 img {
+    width: 15px;  
+    height: auto; 
+    display: inline-block;    
+    animation: boldanim 4s linear  infinite;     
+    transform-origin: center;    
+}
+/* Animation til h2 img */
+@keyframes boldanim {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg); 
+    }
+}
+
+#kampagne h2 img { 
+padding: 0;  /* padding mellem tekst og animation fjernes (påvirker rotation) */
+}
+
+
+/* styling af alle sections h2-elementer */
+#kampagne h2, #historie h2, #produkter h2, #konkurrence h2 {
+    font-family: var(--active);
+    font-size: 25px;  
+    color: var(--mørkerød); 
+    display: block; 
+    padding: 10px 0; 
+    width: 100%; 
+    text-align: center;
+    background-color: var(--lyspink); 
+    margin-bottom: 15px; 
+    z-index: 10; 
+}
+
+#konkurrence h2 {
+    font-family: var(--active);
+    font-size: 25px;  
+    color: var(--mørkerød); 
+    display: block; 
+    width: 100%;
+    padding: 10px 0;  
+    text-align: center;
+    background-color: var(--lyspink);
+    margin-top: 15px; 
+    margin-bottom: 15px;
+}
+
+/* Kampagne-sektion */
+#kampagne img 
+{
+    width: 260px; 
+    height: auto; 
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto;
+    padding-top: 10px;  
+}
+#kampagne p {
+    margin-top: 10px; 
+}
+#viscomputer { /* Tekst fra details-element, som skal vises ved 1000px */
+    display: none; 
+}
+
+#kampagne h3 {
+    font-family: var(--active); 
+    color: white; 
+    font-size: 28px; 
+    display: block; 
+    width: 100%;
+    letter-spacing: 2px;  
+    padding-top: 20px; 
+    text-align: center;
+    text-decoration: underline var(--lyspink); 
+}
+
+p { /* styling af alle p-elementer */
+    font-family: var(--Desire); 
+    display: block; 
+    width: 95%;
+    margin: auto; 
+    line-height: 100%;    
+    color: white; 
+    font-size: 24px;
+    text-align: center;  
+    letter-spacing: 1px;   
+}
+
+details { /* 'Læs mere-funktion' ved tekst */
+    color: white; 
+    font-family: var(--Desire);
+}
+
+summary { /* Tekst som vises i Detail-tag */
+    border: 2px solid var(--lyspink); 
+    border-radius: 70px;
+    width: 100px;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: auto; 
+    margin-right: auto;  
+}
+
+#kampagnesponsor img /* DBU x Jolly */
+{
+    width: 150px; 
+    height: auto;
+    display: block; 
+    margin: auto;
+    padding-top: 10px;
+    opacity: 95%;   
+}
+
+/* Konkurrence section */ 
+
+h4 /* bruges til #HeleDanmarksCola-tekst */ 
+{
+    font-family: var(--active);
+    font-size: 25px; 
+    color: white; 
+    text-align: center;
+    opacity: 85%; 
+}
+.cirkel { /* Cirkel som omringer p-tag med 1 og 2 */
+    font-family: var(--active);
+    text-align: center;
+    border: 2px solid white; 
+    width: 25px;
+    padding-top: 6px;
+    padding-bottom: 6px; 
+    border-radius: 50%;
+    margin-left: auto;  
+    margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;   
+}
+
+/* Billeder som indgår i konkurrence-sektion */
+.qr 
+{
+    width: 170px; 
+    height: auto; 
+    display: block; 
+    margin: 10px auto 20px auto; 
+} 
+
+.trøje {
+    width: 250px; 
+    height: auto; 
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto;  
+}
+
+.InstagramVictor /* Ændrer billede */
+{
+    width: 260px; 
+    margin-left: auto; 
+    margin-right: auto; 
+    margin-bottom: 15px; 
+    height: auto; 
+    display: block;
+    border-radius: 5px; 
+}
+
+.some
+{ 
+    width: 100px; 
+    height: auto; 
+    display: block;
+    margin: auto; 
+    margin-top: 15px; 
+}
+.sometekst
+{
+    font-family: var(--active);
+    font-size: 30px;
+    text-align: center;    
+}
+.VictorJolly
+{
+    width: 320px; 
+    height: auto; 
+    vertical-align: middle;
+}
+
+#historie h3, #produkter h3 /*styling af h3 i produkt og historie-section*/
+{
+    display: block; 
+    text-align: center; 
+    font-family: var(--active);
+    text-decoration: underline;
+    padding-bottom: 10px; 
+    font-size: 25px;
+    letter-spacing: 2px;  
+    font-style: normal; 
+    color: white;
+}
+
+/* Historie-section (h3, h2 og p-elementer i section styles længere oppe)*/
+
+.infobillede { /* Infografik */
+    width: 300px; 
+    height: auto;
+    display: block;
+    margin: 10px auto 20px auto;
+    border-radius: 10px; 
+}
+
+.overskriftprodukt { /*Margin på produkt-overskrift*/
+    margin-top: 10px; 
+}
+#tekstprodresp { /* Tekst som kun vises ved 1000px */
+    display: none; 
+}
+
+/* Sjov pil funktion */
+.arrow {
+    border: solid white;
+    border-width: 0 6px 6px 0;
+    border-radius: 3px; 
+    display: inline-block;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;   
+    opacity: 80%;
+    animation: pil 1.5s ease  infinite;
+}
+/* Animation til pilen */
+@keyframes pil {
+    from {transform: translateY(0) rotate(45deg);}
+    50% {transform: translateY(40%) rotate(45deg);} /*Rotate for direktion, og translate for 'up/ned-effekt'*/
+    to {transform: translateY(0) rotate(45deg);}
+}
+
+/* Produkt section */
+
+/* Container til elementer i hover på produkt-side */
+.billedehover {
+    position: relative;
+    display: block; 
+    margin: auto; 
+    width: 200px; 
+}
+
+.produktbillede {
+    display: block; 
+    width: 100%;
+    margin: 15px 0 15px 0;  
+}
+
+/* Overlaget som skal dukke op når man hover */
+.overlag {
+    border-radius: 10px; 
+    position: absolute;
+    top: 0; 
+    left: 0;
+    margin-top: 20%;  
+    height: 60%; 
+    width: 100%; 
+    background: rgba(0, 0, 0, 0.8); 
+    color: white;
+    font-family: var(--active);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.30s; 
+}
+/* Selve hoveren */
+.overlag:hover
+{
+    opacity: 1; 
+}
+/* Teksten inde i hover-effekten */
+.skrift1 {
+    font-size: 20px; 
+}
+.skrift2 
+{
+    font-size: 20px;
+    margin-top: 10px;  
+}
+
+/* Tryk her-link til Vestfyns-side i Produkt- og historie sektioner */
+.vestfyntryk
+{
+    border: 2px solid white; 
+    border-radius: 20px; 
+    max-width: 100px; 
+    font-family: var(--active);
+    font-size: 20px;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    margin: 10px auto 10px auto;
+    text-decoration: none;
+    color: white;  
+}
+
+.vestfyntryk a:visited {
+    color: white;
+}
+
+.vestfyntryk a:hover {
+    color: var(--mørkerød);  
+    text-decoration: none;
+}
+.vestfyntryk:hover {
+    background-color: white;  
+}
+
+/* Footer-segment */
+footer { /*Flex på selve footer */
+    background-color: var(--lyspink);
+    display: flex; 
+    flex-direction: column;
+    align-items: center;     
+}
+
+footer p { /*Styling af teksten i Footer */
+    font-family: var(--Desire);
+    color: var(--mørkerød);
+    font-size: 25px;   
+    padding: 10px 5px 15px 5px; 
+}
+.adresse, .kontakt { /* Container til adresse og kontakt */
+    margin-right: auto;
+    margin-left: auto; 
+    padding-top: 2vw;  
+}
+.topfoot {
+    text-align: center; /* Kontakt og Adresse overskrift */
+    text-decoration: underline;
+    font-weight: bold; 
+}
+
+.socialfoot { /* Sidelægger SoMe-ikoner */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-left: 20vw;
+    padding-right: 20vw; 
+    padding-bottom: 2vw;
+    padding-top: 2vw;      
+}
+.socialfoot img {
+    width: 40px;
+    padding-left: 20px;  
+    height: auto; 
+}
+
+/* Dimension: iPhone 6/7/8 & iPhone X */
+@media screen and (min-width: 375px) {
+    .VictorJolly { /* Justering af billede, så det passer med sidens størrelse */
+        width: 375px; 
+        height: auto; 
+    }
+}
+/* Dimension: iPhone 6/7/8 Plus */
+@media screen and (min-width: 414px) { /* Justering af billede, så det passer med sidens størrelse */
+    .VictorJolly { 
+        width: 414px;
+    }
+}
+
+@media screen and (min-width: 450px) {
+    /* Konkurrence-section billedestørrelser */
+    .VictorJolly {
+        width: 400px;   
+        height: auto;
+        display: block; 
+        margin: 0px auto 0px auto;  
+    }
+    .infobillede {
+        width: 400px;
+    }
+    .qr {
+        width: 200px; 
+    }
+    .cirkel {
+        width: 40px;
+        padding-top: 8px;
+        padding-bottom: 8px; 
+        font-size: 35px;    
+    }
+    .trøje {
+        width: 280px; 
+}
+}
+
+/* Dimension: iPad */
+@media screen and (min-width: 768px) {
+    
+    /* Header elementet - ændrer størrelsen på headeren, logoet, burgermenuen og menupunkterne inde i (min. 768 px.) */
+    header {
+        height: 80px; 
+    }
+    #menupunkter {
+        width: 100vw;
+        top: 80px;
+        font-size: 50px; 
+    }
+    .burgermenu img {
+        width: 75px; 
+    }
+    .mobillogo img {
+        width: 85px; 
+        height: auto;
+        margin-left: 5px; 
+    }
+    /* Big Photo - ændrer størrelsen på forsidebilledet (min. 768 px.)*/
+    #forsidebillede img {
+        width: 650px; 
+    }
+
+    /* Kampagne section (+ h2, h3, p) (min. 768 px.) */
+    #kampagne img {
+        width: 500px; 
+    }
+    #konkurrence h2 img, #historie h2 img, #kampagne h2 img, #produkter h2 img {
+        width: 30px; /* Fodbold animation - størrelsesændring (min. 768 px.) */
+    }
+    #konkurrence h2, #historie h2, #kampagne h2, #produkter h2 {
+        font-size: 40px; /* h2-elementerne, som indgår mellem bold-animationerne i alle sections (min. 768 px.) */
+    }
+    #kampagne h3, #historie h3, #produkter h3 {
+        font-size: 35px; /* Styrer alle h3 (section-overskrift) elementerne i alle sections (min. 768 px.) */
+    }
+    p {
+        font-size: 35px; /* Styrer alle p-tags som bruges til tekst under overskrifterne i alle sections (min. 768 px.) */
+    }
+    summary {
+        width: 150px;
+        font-size: 25px;  /* Læs mere-funktionen på kampagne side (min. 768 px.) */
+    }
+    #kampagnesponsor img {
+        width: 300px; /* DBU x jolly billedet (min. 768 px.) */
+    }
+
+    /* Konkurrence section (min. 768 px.) */
+
+    .trøje { 
+        width: 320px; 
+    } /* Trøje og mobil med qr-kode */
+    .qr {
+        width: 240px; 
+    }
+    .sometekst {
+        font-size: 40px;
+        text-align: center; /* Hashtagget som figurer under SoMe-ikonerne */
+    }
+    .some {
+        width: 150px; /* Forstørrer SoMe-ikonerne */
+    }
+    h4 { /* 'Hele Danmarks Cola # */
+        font-size: 40px; 
+    }
+
+    /* Historie-sektion */
+
+    .infobillede { /* Infografik billede */
+        width: 600px;
+        margin-top: 40px;
+        margin-bottom: 40px;   
+    }
+
+    .vestfyntryk { /* Tryk her-funktion i Historie- og Produkt-section */
+    border: 4px solid white; 
+    border-radius: 20px; 
+    max-width: 150px;
+    height: 40px;   
+    font-size: 33px;  
+    margin: 15px auto 20px auto; 
+    }
+
+    /* Hover over produkt billeder i produkt-section */
+    .billedehover {
+        width: 250px; /* billedestørrelse */
+    }
+
+    .overlag {
+        margin-top: 0; /* overlaget ved hover */
+        height: 100%; 
+        width: 100%;
+    }
+
+    .skrift1 { 
+        font-size: 35px; /* overskrift i hover */
+        text-align: center;      
+    }
+
+    .skrift2 
+    {
+        font-size: 30px; /* tekst under overskrift i hover */
+        margin-top: 10px; 
+}
+}
+@media screen and (min-width: 1000px) {
+    /* Header-element (fjerner burgermenu) */
+    .burgermenu {
+        display: none; 
+    }
+    .mobillogo img {
+        display: none;
+    }
+    header {
+        height: 100px; 
+    }
+
+    /* Menu til computer */
+    .computermenu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%; 
+        max-width: 1300px;
+        margin-left: auto; 
+        margin-right: auto; 
+    }
+    .computerlogo img {
+        width: 100px; 
+        height: auto;
+        
+    }
+    /* Container som styrer menupunkterne til venstre */
+    .menupunkter2v {
+        margin-right: auto;
+        width: 40%;  
+    }
+    /* Container som styrer menupunkterne til højre */
+    .menupunkter2h {
+        margin-left: auto;
+        width: 40%;  
+    }
+    /* Indholdet i begge containers */
+    .menupunkter2 {
+        font-family: var(--Desire);
+        font-size: 35px;
+        text-decoration: none;
+        color: var(--mørkerød);
+        display: flex; 
+        justify-content: space-between;        
+    }
+   /* Tekst */
+    .menupunkter2 a {
+        text-decoration: none;
+        color: var(--mørkerød);
+        padding-left: 20px;
+        padding-right: 20px;
+
+    }
+    /* Hover-effekt ved computer-menu */
+    .menupunkter2 a:hover {
+        background-color: white;
+        border-radius: 50px;    
+    }
+
+    #forsidebilled img { /*100vw på forsidebillede istedet for PX*/
+        margin: 0; 
+        width: 100vw; 
+    }
+
+
+    #historie h2 img, #produkter h2 img {
+        width: 40px; /* Jolly animation - størrelsesændring (min. 1000 px.) */
+    }
+
+    /* Kampagne-sektion */
+    .responsiv { /* Billede og tekst sidelægges kontra column */
+        display: flex; 
+        justify-content: space-between;  
+    }
+
+    .responsiv p { /* Ændrer teksten ved siden af kampagne-billed */
+        padding-top: 2vw; 
+        font-size: 30px;  
+        max-width: 45vw;
+        margin-right: 2vw;  
+    }
+    #kampagneresponsiv img {
+        max-width: 45vw; /* Der tilføjes en VW istedet for PX på kampagne billedet */
+        margin: 0; 
+    }
+    #viscomputer { /* Teksten fra 'læs mere'-knappen vises her */
+        display: block;  
+    }
+    details { /*Details 'læs mere'-knap fjerens */
+        display: none;    
+    }
+
+    /* Konkurrence-sektion */
+
+    .responsivkonku1 {
+        display: flex; /* QR og Jolly-trøje siddelægges */
+        justify-content: center;  
+    }
+    /* Der tilføjes en VW ved billedernes width istedet for PX */
+    .qr {
+        margin: 0; /* Fjerner margin ved billederne (trøje) */
+        padding-bottom: 3vw; 
+        padding-top: 20px; 
+        width: 20vw;
+    }
+    .trøje {
+        margin: 0;
+        padding-bottom: 1vw;  
+        padding-top: 40px; 
+        width: 25vw;  
+    }
+    .InstagramVictor {
+        width: 25vw;
+        margin-top: 3vw;
+        margin-bottom: 3vw;   
+    }
+    .VictorJolly {
+        width: 35vw; 
+    }
+    .some {
+        width: 13vw;
+    }
+    .sometekst {
+        font-size: 4vw; 
+    }
+    #konkurrence p {
+        font-size: 40px; 
+    }
+
+    /* Produkt-sektion */
+    .responsiv4 {
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px; 
+        margin-bottom: 60px;
+    }
+    /* Bestemte stykker tekst fjernes ved 1000px - produkt */
+    #fjerntekstprod {
+        display: none; 
+    }
+    #produkter i {
+        display: none;  
+    }
+    #tekstprodresp { /* Tekst som kun vises ved 1000px */
+        display: block;
+        font-size: 20px;
+        font-style: italic; 
+        opacity: 0.80;  
+    }
+/* Footer */
+    footer p {
+        font-size: 35px;  /* Ændrer blot skriftstørrelse */
+    }
+    .socialfoot img {
+        width: 60px; 
+        height: auto;
+        padding-left: 2vw;
+    }
+}
