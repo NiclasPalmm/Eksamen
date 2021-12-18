@@ -325,6 +325,9 @@ h4 /* bruges til #HeleDanmarksCola-tekst */
     margin: 10px auto 20px auto;
     border-radius: 10px; 
 }
+.infobillede:hover {
+    transform: scale(1.12); 
+}
 
 .overskriftprodukt { /*Margin på produkt-overskrift*/
     margin-top: 10px; 
@@ -418,7 +421,9 @@ h4 /* bruges til #HeleDanmarksCola-tekst */
     text-decoration: none;
     color: white;  
 }
-
+.vestfyntryk a {
+    text-decoration: none;
+}
 .vestfyntryk a:visited {
     color: white;
 }
